@@ -20,10 +20,7 @@ class UserDataService {
   destroy(id) {
     return http.delete(`/usuarios/${id}`);
   }
-
-  getPreguntas(id) {
-    return http.get(`/usuarios/${id}/preguntas`);
-  }
+  
 }
 
 export default new UserDataService();

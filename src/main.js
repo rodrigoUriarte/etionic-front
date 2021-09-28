@@ -7,16 +7,6 @@ import store from "./store";
 
 Vue.config.productionTip = false;
 
-var mixin = {
-  methods: {
-    $can(permissionName) {
-      return Permissions.indexOf(permissionName) !== -1;
-    },
-  },
-};
-
-Vue.mixin(mixin);
-
 new Vue({
   vuetify,
   store,

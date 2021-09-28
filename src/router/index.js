@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Login from "../views/Login.vue";
 import Dashboard from "../components/Dashboard.vue";
-import TablaUsuarios from "../components/TablaUsuarios.vue";
+import TablaItems from "../components/TablaItems.vue";
 
 Vue.use(VueRouter);
 
@@ -30,9 +30,9 @@ const routes = [
     },
   },
   {
-    path: "/usuarios",
-    name: "Usuarios",
-    component: TablaUsuarios,
+    path: "/items",
+    name: "Items",
+    component: TablaItems,
     meta: {
       requiresAuth: true
     },

@@ -29,13 +29,11 @@ const mutations = {
   setUserData(state, userData) {
     state.user = userData;
     localStorage.setItem("user", JSON.stringify(userData));
-    window.Permissions = userData.permissions;
     http.defaults.headers.common.Authorization = `Bearer ${userData.token}`;
   },
 
   clearUserData() {
     localStorage.removeItem("user");
-    delete window.Permissions;
     location.reload();
   },
 };
